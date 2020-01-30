@@ -25,8 +25,29 @@ class ImageCard extends React.Component {
     const { description, urls } = this.props.image;
 
     return (
-      <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <img ref={this.imageRef} alt={description} src={urls.regular} />
+      <div className="ui people shape" onClick={this.onCardClick}>
+        <div className="sides">
+          <div className="side active">
+            <div
+              className="ui large fade reveal image"
+              style={{ gridRowEnd: `span ${this.state.spans}` }}
+            >
+              <img
+                className="visible content"
+                ref={this.imageRef}
+                alt={description}
+                src={urls.regular}
+              ></img>
+              <img
+                className="hidden content"
+                ref={this.imageRef}
+                alt={description}
+                src={urls.reveal}
+              />
+            </div>
+          </div>
+          <div className="side">hello</div>
+        </div>
       </div>
     );
   }

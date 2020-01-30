@@ -2,31 +2,22 @@
     {
         "id": "0",
         "urls": {
-            "regular": "IMG_0387.JPG"
+            "regular": "panel1.png",
+            "reveal": "panel1text.png"
         }
     },
     {
         "id": "1",
         "urls": {
-            "regular": "IMG_2901.JPG"
+            "regular": "panel2.png",
+            "reveal": "panel2text.png"
         }
     },
     {
         "id": "2",
         "urls": {
-            "regular": "IMG_2614.JPG"
-        }
-    },
-    {
-        "id": "3",
-        "urls": {
-            "regular": "IMG_2857.JPG"
-        }
-    },
-    {
-        "id": "4",
-        "urls": {
-            "regular": "IMG_4438.JPG"
+            "regular": "panel3.png",
+            "reveal": "panel3text.png"
         }
     }
 ]

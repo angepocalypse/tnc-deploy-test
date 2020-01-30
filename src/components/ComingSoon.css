@@ -7,5 +7,10 @@
   text-align: center;
   font-family: 'VulfMono', serif;
   font-size: 48px;
-  padding: 10vh
+  padding: 10vh;
+  margin: auto;
+  word-wrap: break-word;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
 }
