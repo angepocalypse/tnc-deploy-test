@@ -1,4 +1,11 @@
+@font-face {
+  font-family: VulfMono;
+  src: url("../VulfMonoDemo-LightItalic.otf") format("opentype");
+}
 .coming-soon{
   justify-content: center;
   text-align: center;
+  font-family: 'VulfMono', serif;
+  font-size: 48px;
+  padding: 10vh
 }

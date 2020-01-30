@@ -22,7 +22,10 @@ class App extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div className="ui container" style={{ marginTop: "10px" }}>
+      <div
+        className="ui container"
+        style={{ marginTop: "10px", justifyContent: "center" }}
+      >
         <ComingSoon />
         <ImageList images={this.state.images} />
       </div>
