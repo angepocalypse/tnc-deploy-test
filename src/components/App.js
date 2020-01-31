@@ -2,16 +2,18 @@ import React from "react";
 import Home from "./Home";
 import Wedding from "./Wedding";
 import Title from "./Title";
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 class App extends React.Component {
   render() {
-    console.log(this.state);
     return (
       <Router>
         <Title />
-        <Route exact path="/" component={Home} />
-        <Route path="/wedding" component={Wedding} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/wedding" component={Wedding} />
+          <Route render={() => <h3>Not Found</h3>} />
+        </Switch>
       </Router>
     );
   }

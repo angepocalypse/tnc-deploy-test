@@ -10,7 +10,7 @@ class Wedding extends React.Component {
             <div className="side active">
               <div>
                 <p>--- Hidden Villa ---</p>
-                <p2>26870 Moody Rd</p2>
+                <p>26870 Moody Rd</p>
                 <p>Los Altos Hills, CA 94022</p>
                 <br />
                 <p>Attire: Semi-formal</p>

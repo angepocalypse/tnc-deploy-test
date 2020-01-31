@@ -4,6 +4,10 @@ import ImageList from "./ImageList";
 import CustomData from "../data/customData";
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props.history.push("/");
+  }
   state = {
     images: [CustomData]
   };
@@ -18,7 +22,6 @@ class Home extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div
         className="ui container"
