@@ -1,10 +1,11 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 
 class ImageCard extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { spans: 0 };
+    this.state = { spans: 0, wedding: false };
 
     this.imageRef = React.createRef();
   }
@@ -21,8 +22,16 @@ class ImageCard extends React.Component {
     this.setState({ spans });
   };
 
+  onCardClick = () => {
+    this.setState({ wedding: true });
+  };
+
   render() {
     const { description, urls } = this.props.image;
+
+    if (this.state.wedding === true) {
+      return <Redirect to="/wedding" />;
+    }
 
     return (
       <div className="ui people shape" onClick={this.onCardClick}>

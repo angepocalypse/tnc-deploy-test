@@ -1,34 +1,18 @@
 import React from "react";
-import unsplash from "../api/unsplash";
-import SearchBar from "./SearchBar";
-import ImageList from "./ImageList";
-import ComingSoon from "./ComingSoon";
-import CustomData from "../data/customData";
+import Home from "./Home";
+import Wedding from "./Wedding";
+import Title from "./Title";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 class App extends React.Component {
-  state = {
-    images: [CustomData]
-  };
-
-  onSearchSubmit = async term => {
-    const response = await unsplash.get("/search/photos", {
-      params: { query: term }
-    });
-
-    this.setState({ images: response.data.results });
-    console.log(response.data.results);
-  };
-
   render() {
     console.log(this.state);
     return (
-      <div
-        className="ui container"
-        style={{ marginTop: "10px", justifyContent: "center" }}
-      >
-        <ComingSoon />
-        <ImageList images={this.state.images} />
-      </div>
+      <Router>
+        <Title />
+        <Route exact path="/" component={Home} />
+        <Route path="/wedding" component={Wedding} />
+      </Router>
     );
   }
 }
