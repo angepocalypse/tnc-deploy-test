@@ -5,7 +5,10 @@ class ImageCard extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { spans: 0, wedding: false };
+    this.state = {
+      spans: 0,
+      cards: [{ wedding: false }, { details: false }, { registry: false }]
+    };
 
     this.imageRef = React.createRef();
   }
@@ -23,7 +26,16 @@ class ImageCard extends React.Component {
   };
 
   onCardClick = () => {
-    this.setState({ wedding: true });
+    let imageId = this.props.image.id;
+    console.log(imageId);
+    switch (imageId) {
+      case "0":
+        this.setState({ wedding: true });
+      case "1":
+        this.setState({ details: true });
+      case "2":
+        this.setState({ registry: true });
+    }
   };
 
   render() {
