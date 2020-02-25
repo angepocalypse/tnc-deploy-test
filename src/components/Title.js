@@ -6,7 +6,7 @@ class ComingSoon extends React.Component {
   render() {
     return (
       <Link to="/">
-        <div className="coming-soon">Chloe & Tommy</div>
+        <div className="coming-soon">Coming Soon!</div>
       </Link>
     );
   }

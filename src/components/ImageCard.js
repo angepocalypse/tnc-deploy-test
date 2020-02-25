@@ -31,10 +31,15 @@ class ImageCard extends React.Component {
     switch (imageId) {
       case "0":
         this.setState({ wedding: true });
+        break;
       case "1":
         this.setState({ details: true });
+        break;
       case "2":
         this.setState({ registry: true });
+        break;
+      default:
+        break;
     }
   };
 
@@ -46,28 +51,17 @@ class ImageCard extends React.Component {
     }
 
     return (
-      <div className="ui people shape" onClick={this.onCardClick}>
-        <div className="sides">
-          <div className="side active">
-            <div
-              className="ui large fade reveal image"
-              style={{ gridRowEnd: `span ${this.state.spans}` }}
-            >
+      <div onClick={this.onCardClick}>
+        <div>
+          <div>
+            <div>
               <img
-                className="visible content"
                 ref={this.imageRef}
                 alt={description}
                 src={urls.regular}
               ></img>
-              <img
-                className="hidden content"
-                ref={this.imageRef}
-                alt={description}
-                src={urls.reveal}
-              />
             </div>
           </div>
-          <div className="side">hello</div>
         </div>
       </div>
     );
