@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: VulfMono;
   src: url("../VulfMonoDemo-LightItalic.otf") format("opentype");
-}
+} */
 .wedding{
   justify-content: center;
   text-align: center;
-  font-family: 'VulfMono', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 28px;
   padding: 10vh;
   margin: auto;
